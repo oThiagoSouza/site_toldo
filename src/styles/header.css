@@ -1,0 +1,73 @@
+.nav-logo{
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+header{
+    width: 100%;
+    padding: 28px 8%;
+    background-color: #31363F;
+    z-index: 2;
+}
+
+#navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_list{
+    display: flex;
+    gap: 48px;
+}
+
+.nav-item a {
+    color: #76ABAE;
+    font-weight: 600;
+}
+
+.nav-item.active a{
+    color: #EEEEEE;
+    border-bottom: 3px solid #76ABAE;
+}
+
+#mobile_btn{
+    display: none;
+}
+
+#mobile_menu{
+    display: none;
+}
+
+@media screen and (max-width: 1170px){
+    #nav_list, #navbar .btn_default{
+        display: none;
+    }
+    
+    #mobile_btn{
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #mobile_menu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #mobile_nav_list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item{
+        text-align: center;
+    }
+}
